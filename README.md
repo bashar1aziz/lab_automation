@@ -23,7 +23,7 @@ Topology description
 
 On Eve-NG there runs a virtual network environment with the following switches:
 
-hostname IP Description s11-iol 10.100.1.11 Cisco IOL virtual switch s12-iol 10.100.1.12 Cisco IOL virtual switch s13-iol 10.100.1.13 Cisco IOL virtual switch s14-iol 10.100.1.14 Cisco IOL virtual switch s15-iol 10.100.1.15 Cisco IOL virtual switch mgmt-iol 10.100.1.100 Cisco IOL virtual switch used for aggregation and uplink to ansible host erikbuntu 10.100.1.20 Ansible host All switches have a interface in a switch management vlan, which is switched through the management switch (mgmt-iol) to the outside, towards the Ansible host.
+hostname IP Description s11-iol 10.100.1.11 Cisco IOL virtual switch s12-iol 10.100.1.12 Cisco IOL virtual switch s13-iol 10.100.1.13 Cisco IOL virtual switch s14-iol 10.100.1.14 Cisco IOL virtual switch s15-iol 10.100.1.15 Cisco IOL virtual switch mgmt-iol 10.100.1.100 Cisco IOL virtual switch used for aggregation and uplink to ansible host  10.100.1.20 Ansible host All switches have a interface in a switch management vlan, which is switched through the management switch (mgmt-iol) to the outside, towards the Ansible host.
 
 Ansible configuration
 
@@ -31,7 +31,9 @@ At the start of the course, the Ansible configuration is still basic. Here is an
 
 File Description ansible.cfg Standard ansible configuration file, with tweaks for vault and inventory location inventory Basic static inventory file listing all switches in the lab environment group_vars/lab/vars placeholder for global variables related to the lab group group_vars/lab/vault placeholder for vault variables related to the lab group (currently contains ssh password for Cisco switches) Example of raw adhoc command:
 
-erikr@erikbuntu:~/ansible_lab$ ansible -m raw -a "show run | i hostname" lab s12-iol | CHANGED | rc=0 >> hostname s12-iol Shared connection to s12-iol closed.
+
+
+:~/ansible_lab$ ansible -m raw -a "show run | i hostname" lab s12-iol | CHANGED | rc=0 >> hostname s12-iol Shared connection to s12-iol closed.
 
 s14-iol | CHANGED | rc=0 >> hostname s14-iol Shared connection to s14-iol closed.
 
