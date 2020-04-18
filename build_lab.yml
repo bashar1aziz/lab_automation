@@ -3,7 +3,7 @@
   tasks:
     - name: "TASK 1: Apply device configurations using SSH/CLI"
       ios_config:
-        src: "configs/{{ inventory_hostname }}.txt"
+        src: "configs_build/{{ inventory_hostname }}.txt"
       notify: config_changed
       register: cli_result
 
@@ -14,21 +14,8 @@
       debug:
         msg: "{{ cli_result.commands }}"
 
-- hosts: rr
-  tasks:    
-    - name: configure top level configuration
-      iosxr_config:
-       src: "configs/{{ inventory_hostname }}.txt"
-      notify: config_changed
-      register: cli_result
 
-  handlers:
-    - name: "HANDLER 1: Display relevant changes"
-      listen: config_changed
-      debug:
-        msg: "{{ cli_result.commands }}"
-
-    - name: "HANDLER 2: Wait 90 seconds for convergence"
+    - name: "HANDLER 2: Wait 10 seconds for convergence"
       listen: config_changed
       pause:
         seconds: 10
@@ -64,9 +51,3 @@
     - name: "TASK 1: Ping R7"
       ios_ping:
         dest: 7.7.7.7
-- name: "PLAY 2: Check pings on RR"
-  hosts: R2
-  tasks:
-    - name: "TASK 1: Ping RR"
-      ios_ping:
-        dest: 172.1.1.7

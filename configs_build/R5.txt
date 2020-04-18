@@ -1,0 +1,33 @@
+hostname R5
+int lo 0 
+ip add 5.5.5.5 255.255.255.255
+
+
+
+
+int e0/1
+no shu
+ip add 172.1.1.1 255.255.255.254
+ip ospf network point-to-point 
+
+int e0/2
+no shu
+ip add 172.1.1.9 255.255.255.254
+ip ospf network point-to-point 
+
+
+int e0/3
+no shu
+ip add 172.1.1.17 255.255.255.254
+ip ospf network point-to-point 
+
+
+
+int e1/0
+no shu
+ip add 172.1.1.24 255.255.255.254
+ip ospf network point-to-point 
+
+
+router ospf 1
+network 0.0.0.0 0.0.0.0 a 0

@@ -1,0 +1,29 @@
+hostname R3
+
+int lo 0 
+ip add 3.3.3.3 255.255.255.255
+
+
+int e0/0
+no shu
+ip add 172.1.1.8 255.255.255.254
+ip ospf network point-to-point 
+
+int e0/1
+no shu
+ip add 172.1.1.10 255.255.255.254
+ip ospf network point-to-point 
+
+int e0/2
+no shu
+ip add 172.1.1.12 255.255.255.254
+ip ospf network point-to-point 
+
+int e0/3
+no shu
+ip add 172.1.1.14 255.255.255.254
+ip ospf network point-to-point 
+
+
+router ospf 1
+network 0.0.0.0 0.0.0.0 a 0
