@@ -1,0 +1,72 @@
+---
+- hosts: routers
+  tasks:
+    - name: "TASK 1: Apply device configurations using SSH/CLI"
+      ios_config:
+        src: "configs/{{ inventory_hostname }}.txt"
+      notify: config_changed
+      register: cli_result
+
+
+  handlers:
+    - name: "HANDLER 1: Display relevant changes"
+      listen: config_changed
+      debug:
+        msg: "{{ cli_result.commands }}"
+
+- hosts: rr
+  tasks:    
+    - name: configure top level configuration
+      iosxr_config:
+       src: "configs/{{ inventory_hostname }}.txt"
+      notify: config_changed
+      register: cli_result
+
+  handlers:
+    - name: "HANDLER 1: Display relevant changes"
+      listen: config_changed
+      debug:
+        msg: "{{ cli_result.commands }}"
+
+    - name: "HANDLER 2: Wait 90 seconds for convergence"
+      listen: config_changed
+      pause:
+        seconds: 10
+
+- name: "PLAY 2: Check pings on R3"
+  hosts: R2
+  tasks:
+    - name: "TASK 1: Ping R3"
+      ios_ping:
+        dest: 3.3.3.3
+- name: "PLAY 2: Check pings on R4"
+  hosts: R2
+  tasks:
+    - name: "TASK 1: Ping R4"
+      ios_ping:
+        dest: 4.4.4.4
+- name: "PLAY 2: Check pings on R5"
+  hosts: R2
+  tasks:
+    - name: "TASK 1: Ping R5"
+      ios_ping:
+        dest: 5.5.5.5
+- name: "PLAY 2: Check pings on R6"
+  hosts: R2
+  tasks:
+    - name: "TASK 1: Ping R6"
+      ios_ping:
+        dest: 6.6.6.6
+
+- name: "PLAY 2: Check pings on R7"
+  hosts: R2
+  tasks:
+    - name: "TASK 1: Ping R7"
+      ios_ping:
+        dest: 7.7.7.7
+- name: "PLAY 2: Check pings on RR"
+  hosts: R2
+  tasks:
+    - name: "TASK 1: Ping RR"
+      ios_ping:
+        dest: 172.1.1.7

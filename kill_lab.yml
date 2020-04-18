@@ -1,0 +1,16 @@
+---
+- name: "PLAY 1: Build course lab"
+  hosts: routers
+  tasks:
+    - name: "TASK 1: Apply device configurations using SSH/CLI"
+      ios_config:
+        src: "config_clean/{{ inventory_hostname }}.txt"
+        save_when: changed
+      notify: config_changed
+      register: cli_result
+
+  handlers:
+    - name: "HANDLER 1: Display relevant changes"
+      listen: config_changed
+      debug:
+        msg: "{{ cli_result.commands }}"
