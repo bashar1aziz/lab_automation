@@ -19,7 +19,7 @@ Local vswitch topology:
 Topology description
 
 
-< img src="images/netlab.jpg">
+<img src="images/netlab.jpg">
 
 On Eve-NG there runs a virtual network environment with the following switches:
 
