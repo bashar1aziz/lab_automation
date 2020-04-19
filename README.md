@@ -11,10 +11,27 @@ Table of contents
 <a name="env"></a>
 ## 1. Enviroment Overview
 
-sometext
+This lab is built in EVE-NG, is a network virtualisation platform which an interface to building virtual network topologies of many vendors of networking equipment
 
 <a name="net"></a>
 ## 2. Network Topology
+
+In this lab is the management interfaces are pre-configures with the following Routers:
+
+R2 192.168.170.182
+
+R3 192.168.170.183
+
+R4 192.168.170.184
+
+R5 192.168.170.185
+
+R6 192.168.170.186
+
+R7 192.168.170.187
+
+
+
 
 
 <a name="ans"></a>
