@@ -49,5 +49,6 @@ All Routers have a interface in Management-NAT(vmnet1), which is Routers through
 <a name="play"></a>
 ## 4. Playbooks
 
+build_lab.yml: Playbook which reads config from all hosts and stores it in the configs_build directory.
 
-
+clean_lab.yml: Playbook which reads config from all hosts and stores it in the configs_clean directory. 
