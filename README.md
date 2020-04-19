@@ -21,6 +21,20 @@ Topology description
 
 <img src="images/netlab.jpg">
 
+
+1. [ Description. ](#desc)
+2. [ Usage tips. ](#usage)
+
+<a name="desc"></a>
+## 1. Description
+
+sometext
+
+<a name="usage"></a>
+## 2. Usage tips
+
+sometext
+
 On Eve-NG there runs a virtual network environment with the following switches:
 
 hostname IP Description s11-iol 10.100.1.11 Cisco IOL virtual switch s12-iol 10.100.1.12 Cisco IOL virtual switch s13-iol 10.100.1.13 Cisco IOL virtual switch s14-iol 10.100.1.14 Cisco IOL virtual switch s15-iol 10.100.1.15 Cisco IOL virtual switch mgmt-iol 10.100.1.100 Cisco IOL virtual switch used for aggregation and uplink to ansible host  10.100.1.20 Ansible host All switches have a interface in a switch management vlan, which is switched through the management switch (mgmt-iol) to the outside, towards the Ansible host.
