@@ -2,6 +2,19 @@
 
 Table of contents
 
+1. [ Description. ](#desc1)
+2. [ Usage tips. ](#usage)
+
+<a name="desc"></a>
+## 1. Description
+
+sometext
+
+<a name="usage"></a>
+## 2. Usage tips
+
+
+
 Environment description Topology description Ansible configuration Implemented playbooks
 
 Environment description
@@ -22,16 +35,7 @@ Topology description
 <img src="images/netlab.jpg">
 
 
-1. [ Description. ](#desc)
-2. [ Usage tips. ](#usage)
 
-<a name="desc"></a>
-## 1. Description
-
-sometext
-
-<a name="usage"></a>
-## 2. Usage tips
 
 sometext
 
