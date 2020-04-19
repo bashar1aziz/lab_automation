@@ -1,4 +1,4 @@
-# Ansible lab automation as a part of Network automation course.
+# Ansible lab automation.
 
 Table of contents
 
