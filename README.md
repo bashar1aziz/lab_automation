@@ -11,7 +11,7 @@ Table of contents
 <a name="env"></a>
 ## 1. Enviroment Overview
 
-This lab is built in EVE-NG, is a network virtualisation platform which an interface to building virtual network topologies of many vendors of networking equipment
+This lab is built in EVE-NG which is a network virtualisation platform supports many vendors.
 
 <a name="net"></a>
 ## 2. Network Topology
