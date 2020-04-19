@@ -33,7 +33,7 @@ R7 192.168.170.187
 All Routers have a interface in Management-NAT(vmnet1), which is Routers through the management vmnet1 to the outside, towards the Ansible host.
 
 
-<img src="images/netlab.jpg">
+<img src="images/lab_auto.png">
 
 
 <a name="ans"></a>
