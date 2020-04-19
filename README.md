@@ -2,7 +2,7 @@
 
 Table of contents
 
-1. [ Description.]
+1. [ Description.](#des)
 2. [ Usage tips. ](#usage)
 
 <a name="desc"></a>
