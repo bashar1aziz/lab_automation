@@ -1,11 +1,12 @@
 ---
 all:
   children:
-    routers:
+    PE:
       hosts:
-        R2:
-        R3:
-        R4:
-        R5:
-        R6:
-        R7:
+        PE1:
+        PE2:
+        PE3:
+        PE4:
+      CE:
+        CE1:
+        CE2:
