@@ -20,34 +20,21 @@
       pause:
         seconds: 10
 
-- name: "PLAY 2: Check pings on R3"
-  hosts: R2
+- name: "PLAY 1: Check pings on PE2"
+  hosts: PE1
   tasks:
-    - name: "TASK 1: Ping R3"
+    - name: "TASK 1: Ping PE2"
+      ios_ping:
+        dest: 2.2.2.2
+- name: "PLAY 2: Check pings on PE3"
+  hosts: PE1
+  tasks:
+    - name: "TASK 1: Ping PE3"
       ios_ping:
         dest: 3.3.3.3
-- name: "PLAY 2: Check pings on R4"
-  hosts: R2
+- name: "PLAY 3: Check pings on PE4"
+  hosts: PE1
   tasks:
-    - name: "TASK 1: Ping R4"
+    - name: "TASK 1: Ping PE4"
       ios_ping:
         dest: 4.4.4.4
-- name: "PLAY 2: Check pings on R5"
-  hosts: R2
-  tasks:
-    - name: "TASK 1: Ping R5"
-      ios_ping:
-        dest: 5.5.5.5
-- name: "PLAY 2: Check pings on R6"
-  hosts: R2
-  tasks:
-    - name: "TASK 1: Ping R6"
-      ios_ping:
-        dest: 6.6.6.6
-
-- name: "PLAY 2: Check pings on R7"
-  hosts: R2
-  tasks:
-    - name: "TASK 1: Ping R7"
-      ios_ping:
-        dest: 7.7.7.7
