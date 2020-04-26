@@ -1,5 +1,3 @@
-hostname R6
-
 
 no int lo 0 
 
@@ -15,15 +13,8 @@ no shu
 no ip add 
 no ip ospf network point-to-point 
 
-int e0/2
-no shu
-no ip add 
-no ip ospf network point-to-point 
-
-int e0/3
-no shu
-no ip add 
-no ip ospf network point-to-point 
 
 
 no router ospf 1
+
+

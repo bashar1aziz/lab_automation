@@ -1,5 +1,5 @@
 ---
-- hosts: routers
+- hosts: PE
   tasks:
     - name: "TASK 1: Apply device configurations using SSH/CLI"
       ios_config:
