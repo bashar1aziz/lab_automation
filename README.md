@@ -26,9 +26,6 @@ PE3 192.168.170.183
 
 PE4 192.168.170.184
 
-CE1 192.168.170.185
-
-CE2 192.168.170.186
 
 All Routers have a interface in Management-NAT(vmnet1), which is Routers through the management vmnet1 to the outside, towards the Ansible host.
 
