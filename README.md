@@ -18,17 +18,17 @@ This lab is built in EVE-NG, is a network virtualisation platform which an inter
 
 In this lab is the management interfaces are pre-configures with the following Routers:
 
-R2 192.168.170.182
+PE1 192.168.170.181
 
-R3 192.168.170.183
+PE2 192.168.170.182
 
-R4 192.168.170.184
+PE3 192.168.170.183
 
-R5 192.168.170.185
+PE4 192.168.170.184
 
-R6 192.168.170.186
+CE1 192.168.170.185
 
-R7 192.168.170.187
+CE2 192.168.170.186
 
 All Routers have a interface in Management-NAT(vmnet1), which is Routers through the management vmnet1 to the outside, towards the Ansible host.
 
